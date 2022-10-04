@@ -1,15 +1,13 @@
 # IncogniTalk
 
-IncogniTalk is a social media website that inspirated by _Twitter_ with added anonymous comment like _Secreto_.
+IncogniTalk is a social media website that inspirated by Twitter with added anonymous comment like Secreto.
 
-## Main Features :
+## Main Features
 
-Main features that will be implemented on the website :
+- Posting in user's timeline or feed
+- Commenting or asking in secret/incognito, so the user info won't be showed/revealed
 
-- Posting in user's **timeline** / **feed**
-- Commenting or asking in _incognito_ (user name won't be showed)
-
-## Contributors :
+## Contributors
 
 1. Fikri Alwan Ramadhan ([fikrialwan](https://github.com/fikrialwan))
 2. Mohammad Farizan ([mohammadfarizan](https://github.com/mohammadfarizan))
@@ -18,6 +16,5 @@ Main features that will be implemented on the website :
 
 ## Design and Links
 
-Figma : [IncogniTalk](https://www.figma.com/file/82QOJVg0SDmLjRLqobfyVv/Figma-Corp?node-id=0%3A1)
-
-Live : [https://incognitalk.netlify.app/](https://incognitalk.netlify.app/)
+- Figma: [IncogniTalk](https://www.figma.com/file/82QOJVg0SDmLjRLqobfyVv/Figma-Corp?node-id=0%3A1)
+- Live: https://incognitalk.netlify.app
