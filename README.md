@@ -16,7 +16,7 @@ Main features that will be implemented on the website :
 3. Muhamad Agung Nur Ramadhan ([agnuramdan](https://github.com/agnuramdan))
 4. Nur Ikhwan ([ikhwanmachmud](https://github.com/ikhwanmachmud))
 
-## Desaign and Links
+## Design and Links
 
 Figma : [IncogniTalk](https://www.figma.com/file/82QOJVg0SDmLjRLqobfyVv/Figma-Corp?node-id=0%3A1)
 
