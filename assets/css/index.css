@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #222831;
+}
+
+h1 {
+  text-align: center;
+  font-size: 96px;
+  color: #eeeeee;
+}
