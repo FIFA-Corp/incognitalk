@@ -20,4 +20,4 @@ Main features that will be implemented on the website :
 
 Figma : [IncogniTalk](https://www.figma.com/file/82QOJVg0SDmLjRLqobfyVv/Figma-Corp?node-id=0%3A1)
 
-Live : _Soon_
+Live : [https://incognitalk.netlify.app/](https://incognitalk.netlify.app/)
