@@ -7,3 +7,19 @@ body {
   background-color: #222831;
   color: #eeeeee;
 }
+form {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+form textarea {
+  padding: 15px 30px;
+}
+.post-card {
+  padding: 15px 30px;
+  background-color: #393e46;
+  margin: 15px;
+  border-radius: 10px;
+}
