@@ -18,3 +18,27 @@ IncogniTalk is a social media website that inspirated by Twitter with added anon
 
 - Figma: [IncogniTalk](https://www.figma.com/file/82QOJVg0SDmLjRLqobfyVv/Figma-Corp?node-id=0%3A1)
 - Live: https://incognitalk.netlify.app
+
+## REST API Endpoints
+
+URL: `https://api.kontenbase.com/query/api/v1/29f479eb-b571-4de1-978b-10ac1755d57c`
+
+- GET `/questions`
+- POST 
+
+| HTTP | Endpoint     | Description   |
+|------|--------------|---------------|
+| GET  | `/questions` | Get all posts |
+
+
+## Data Structure
+
+```json
+{
+  "_id": "",
+  "title": "",
+  "description": ""
+  "createdAt": ""
+}
+```
+
