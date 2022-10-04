@@ -21,24 +21,35 @@ IncogniTalk is a social media website that inspirated by Twitter with added anon
 
 ## REST API Endpoints
 
-URL: `https://api.kontenbase.com/query/api/v1/29f479eb-b571-4de1-978b-10ac1755d57c`
+URL: `https://api.kontenbase.com/query/api/v1/ed5645dd-f5f3-468d-b5f9-50d322d2b646`
 
-- GET `/questions`
-- POST 
-
-| HTTP | Endpoint     | Description   |
-|------|--------------|---------------|
-| GET  | `/questions` | Get all posts |
-
+| HTTP   | Endpoint           | Description    |
+| ------ | ------------------ | -------------- |
+| GET    | `/posts?$lookup=*` | Get all posts  |
+| POST   | `/posts`           | Create post    |
+| PATCH  | `/posts/:id`       | Edit post      |
+| DELETE | `/posts/:id`       | Delete post    |
+| POST   | `/comments`        | Create comment |
+| PATCH  | `/comments/:id`    | Edit comment   |
 
 ## Data Structure
 
 ```json
-{
-  "_id": "",
-  "title": "",
-  "description": ""
-  "createdAt": ""
-}
+[
+  {
+    "_id": "633bcc6bdadc42808a40c6af",
+    "comments": [],
+    "post": ""
+  },
+  {
+    "_id": "633bd40fdadc42808a40c6b1",
+    "comments": [
+      {
+        "_id": "633c37e0dadc42808a40c6fc",
+        "comments": "hai juga"
+      }
+    ],
+    "post": "hello all"
+  }
+]
 ```
-
