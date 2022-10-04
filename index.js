@@ -2,10 +2,17 @@ import { createPost } from "./module/posts/create-post.js";
 import { getPost } from "./module/posts/get-post.js";
 
 const formElement = document.querySelector('form');
+const postSectionElement = document.getElementsByClassName('post-section')[0];
 
 const renderPost = async () => {
   const posts = await getPost();
-  console.log(posts);
+  postSectionElement.innerHTML = posts.reverse().map(({ post }) => {
+    return `
+      <div>
+        <h1>${post}</h1>
+      </div>
+    `
+  }).join("")
 }
 
 formElement.addEventListener('submit', async (event) => {
