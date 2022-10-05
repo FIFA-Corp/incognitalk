@@ -8,6 +8,7 @@ body {
   color: #eeeeee;
 }
 form {
+  position: relative;
   width: 100%;
   padding: 15px;
   box-sizing: border-box;
@@ -16,6 +17,28 @@ form {
 }
 form textarea {
   padding: 15px 30px;
+  margin: 0px 100px 0px 100px;
+  border-radius: 10px;
+  min-height: 140px;
+  background-color: #393e46;
+  resize: none;
+  border: none;
+}
+form button {
+  position: absolute;
+  padding: 5px 20px;
+  margin-bottom: 25px;
+  bottom: 0px;
+  right: 0px;
+  margin-right: 150px;
+  background-color: #00adb5;
+  border: 0px;
+  border-radius: 15px;
+  color: white;
+  transition-duration: 0.2s;
+}
+form button:hover {
+  transform: scale(1.1);
 }
 .post-card {
   padding: 15px 30px;
