@@ -21,9 +21,10 @@ const renderPost = async () => {
 formElement.addEventListener("submit", async (event) => {
   try {
     event.preventDefault();
-    const form = new FormData(formElement);
+    const form = new FormData(event.target);
     const postValue = form.get("post");
     const addPost = await createPost(postValue);
+    event.target.reset();
     renderPost();
   } catch (error) {
     console.error(error.message);
