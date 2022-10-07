@@ -3,6 +3,19 @@ import { getPost } from "./module/posts/get-post.js";
 
 const formElement = document.querySelector("form");
 const postSectionElement = document.getElementById("post-section");
+const textAreaElement = document.getElementById("post");
+const submitButtonElement = document.getElementById("submit-button");
+
+textAreaElement.addEventListener("input", () => {
+  if (
+    textAreaElement.value.length == 0 ||
+    textAreaElement.value.trim().length == 0
+  ) {
+    submitButtonElement.disabled = true;
+  } else {
+    submitButtonElement.disabled = false;
+  }
+});
 
 const renderPost = async () => {
   const posts = await getPost();
@@ -16,7 +29,9 @@ const renderPost = async () => {
           <time class="font-light text-xs text-white-second">5 Okt 2022</time>
           <h1 class="font-medium text-lg text-white-primary">${post}</h1>
         </div>
-        <p class="font-normal text-base text-primary">${lengthComment > 0 ? lengthComment : 'Add'} ${lengthComment > 1 ? 'comments' : 'comment'}</p>
+        <p class="font-normal text-base text-primary">${
+          lengthComment > 0 ? lengthComment : "Add"
+        } ${lengthComment > 1 ? "comments" : "comment"}</p>
       </div>
     `;
     })
