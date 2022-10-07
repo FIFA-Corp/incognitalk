@@ -17,17 +17,24 @@
     />
     <link rel="stylesheet" href="/dist/output.css" />
   </head>
-  <body class="bg-grey-primary">
-    <h1 class="text-white-primary font-ubuntu text-3xl text-center py-4">
+  <body class="bg-grey-primary px-28">
+    <h1 class="text-white-primary font-ubuntu text-4xl text-center py-4">
       IncogniTalk
     </h1>
-    <form>
+    <form class="w-full bg-grey-second rounded-2xl p-8 flex flex-col items-end">
       <textarea
         id="post"
         name="post"
         placeholder="What's happening?"
+        class="bg-grey-second w-full resize-none outline-none text-white-second text-2xl font-light placeholder:text-white-second"
+        rows="3"
       ></textarea>
-      <button type="submit">Send</button>
+      <button
+        type="submit"
+        class="text-white-primary text-2xl font-semibold py-3 px-7 bg-primary rounded-full hover:scale-105 transition-all ease-linear duration-300"
+      >
+        Send
+      </button>
     </form>
     <div class="post-section"></div>
     <script type="module" src="/index.js"></script>
