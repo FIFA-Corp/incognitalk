@@ -6,6 +6,7 @@ const postSectionElement = document.getElementById("post-section");
 const textAreaElement = document.getElementById("post");
 const submitButtonElement = document.getElementById("submit-button");
 
+dayjs.extend(window.dayjs_plugin_relativeTime);
 textAreaElement.addEventListener("input", () => {
   if (
     textAreaElement.value.length == 0 ||
@@ -21,12 +22,14 @@ const renderPost = async () => {
   const posts = await getPost();
   postSectionElement.innerHTML = posts
     .reverse()
-    .map(({ post, comments }) => {
-      const lengthComment = comments.length;
+    .map(({ post, commentItems, createPostDate }) => {
+      const lengthComment = commentItems.length;
+      const postedAt = createPostDate;
+      const postedAtDisplay = dayjs(postedAt).fromNow();
       return `
       <div class="py-5 px-7 bg-grey-second rounded-2xl mb-2 flex flex-col gap-4">
         <div class="flex flex-col gap-1">
-          <time class="font-light text-xs text-white-second">5 Okt 2022</time>
+          <time class="font-light text-xs text-white-second">${postedAtDisplay}</time>
           <h1 class="font-medium text-lg text-white-primary">${post}</h1>
         </div>
         <p class="font-normal text-base text-primary">${
