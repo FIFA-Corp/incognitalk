@@ -21,7 +21,6 @@ textAreaElement.addEventListener("input", () => {
 const renderPost = async () => {
   const posts = await getPost();
   postSectionElement.innerHTML = posts
-    .reverse()
     .map(({ post, commentItems, createPostDate }) => {
       const lengthComment = commentItems.length;
       const postedAt = createPostDate;
@@ -32,8 +31,7 @@ const renderPost = async () => {
           <time class="font-light text-xs text-white-second">${postedAtDisplay}</time>
           <h1 class="font-medium text-lg text-white-primary">${post}</h1>
         </div>
-        <p class="font-normal text-base text-primary">${
-          lengthComment > 0 ? lengthComment : "Add"
+        <p class="font-normal text-base text-primary">${lengthComment > 0 ? lengthComment : "Add"
         } ${lengthComment > 1 ? "comments" : "comment"}</p>
       </div>
     `;
