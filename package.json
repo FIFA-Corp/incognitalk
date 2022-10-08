@@ -22,5 +22,8 @@
   "homepage": "https://github.com/FIFA-Corp/incognitalk#readme",
   "devDependencies": {
     "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.5"
   }
 }
