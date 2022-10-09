@@ -6,6 +6,7 @@ const formElement = document.querySelector("form");
 const postSectionElement = document.getElementById("post-section");
 const textAreaElement = document.getElementById("post");
 const submitButtonElement = document.getElementById("submit-button");
+const popularPostElement = document.getElementById("popular-post-items");
 
 dayjs.extend(window.dayjs_plugin_relativeTime);
 textAreaElement.addEventListener("input", () => {
@@ -19,8 +20,9 @@ textAreaElement.addEventListener("input", () => {
   }
 });
 
-const renderPost = async () => {
+const render = async () => {
   const posts = await getPost();
+  const popularPostWithLimit = SortPopular(posts, 5);
   postSectionElement.innerHTML = posts
     .map(({ post, commentItems, createPostDate }) => {
       const lengthComment = commentItems.length;
@@ -38,6 +40,15 @@ const renderPost = async () => {
     `;
     })
     .join("");
+
+  popularPostElement.innerHTML = popularPostWithLimit.map(({ post, commentsCount }) => {
+    return `
+        <div class="flex flex-col gap-1">
+          <h1 class="text-white-primary text-lg font-medium leading-none">${post}</h1>
+          <p class="text-white-second font-normal text-sm">${commentsCount > 0 ? commentsCount : "Add"} ${commentsCount > 1 ? "comments" : "comment"}</p>
+        </div>
+      `
+  }).join("");
 };
 
 formElement.addEventListener("submit", async (event) => {
@@ -47,10 +58,10 @@ formElement.addEventListener("submit", async (event) => {
     const postValue = form.get("post");
     const addPost = await createPost(postValue);
     event.target.reset();
-    renderPost();
+    render();
   } catch (error) {
     console.error(error.message);
   }
 });
 
-renderPost();
+render();

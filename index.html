@@ -32,7 +32,7 @@
       <h1 class="text-white-primary font-ubuntu text-4xl">IncogniTalk</h1>
     </div>
     <main class="flex flex-col-reverse xl:flex-row gap-12">
-      <section class="flex-1">
+      <section class="basis-8/12">
         <form
           class="w-full bg-grey-second rounded-2xl p-8 flex flex-col items-end"
         >
@@ -54,7 +54,7 @@
         </form>
         <div id="post-section" class="my-5"></div>
       </section>
-      <section>
+      <section class="basis-4/12">
         <div id="side-menu" class="w-full flex flex-col flex-1 gap-8">
           <div
             id="search-box-container"
@@ -75,8 +75,14 @@
             id="popular-post-container"
             class="bg-grey-second sm:flex flex-col rounded-3xl px-6 py-6"
           >
-            <h2 class="text-white-primary text-xl">Popular Post</h2>
-            <div id="popular-post-items"></div>
+            <h2 class="text-white-primary text-xl font-bold">Popular Post</h2>
+            <div id="popular-post-items" class="flex flex-col gap-4 my-5"></div>
+            <h3
+              if="show-all-popular"
+              class="text-white-primary text-base font-medium cursor-pointer"
+            >
+              Show all popular
+            </h3>
           </div>
         </div>
       </section>
