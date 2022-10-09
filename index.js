@@ -1,5 +1,6 @@
 import { createPost } from "./module/posts/create-post.js";
 import { getPost } from "./module/posts/get-post.js";
+import SortPopular from "./module/services/sort-popular.js";
 
 const formElement = document.querySelector("form");
 const postSectionElement = document.getElementById("post-section");
